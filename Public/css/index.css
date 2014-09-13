@@ -1,0 +1,37 @@
+html,body {
+	margin: 0;
+	padding:0;
+	height: 100%;
+}
+
+body
+{
+	background-image:url(../img/bg.jpg);
+}
+
+.content{
+	width: 80%;
+	margin-top: 96px;
+	margin-bottom: 96px; 
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+.login_container{
+	float: right;
+	border: 1px solid #a0b1c4;
+	width: 334px;
+	height: 373px;
+	position: relative;
+	z-index: 12;
+	padding: 0px;
+	margin: 0 20px 0 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.form_site{
+	margin-top:60px;
+	margin-bottom: 20px
+}

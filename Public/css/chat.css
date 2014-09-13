@@ -1,0 +1,110 @@
+html{
+	/* Ensure the html element always takes up the full height of the browser window */
+	min-height:100%;
+	/* The Magic */
+	background-size:cover;
+	background-image: url(../img/fiberboard.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+body{
+	/* Workaround for some mobile browsers */
+	min-height:100%;
+	font:14px/1.3 'Segoe UI',Arial, sans-serif;
+}
+
+#backpic {
+	width:150%;
+	color: #000;
+	padding-right: 0;
+	padding-bottom: 0px;
+	padding-left: 0;
+	margin-left: 0px;
+	text-align: center;
+	margin-top: 0px;
+	height: 100%;
+	position: absolute;
+	top:0px;
+	background-size:cover;
+	background-image: url(../img/welcome.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-attachment: scroll;
+}
+
+
+
+.chat_panel{	
+	float:right;
+	position: relative;
+	width: 50%;
+	min-height: 550px;
+	margin: auto;
+	margin-top: 5%;
+	margin-right: 20%;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+	
+}
+
+.left_container{
+	float: left;
+	border: 1px solid #a0b1c4;
+	width: 20%;
+	min-height: 600px;
+	position: relative;
+	z-index: 12;
+	background-color: white;
+	padding: 0px;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.chat{	
+	float:right;
+	position: relative;
+	width: 50%;
+	height: 20px;
+	padding-left:15%;
+	margin: auto;
+	margin-top: 5%;
+	margin-right: 20%;
+	background-color:rgba(0, 0, 0,);
+	
+}
+
+.list{
+	margin: auto;
+	max-width: 80%;
+}
+
+/*.footer{
+	position: fixed;
+	border: 3px solid;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: background-color:rgba(0, 51, 51,0.5);
+	font: white;
+}
+*/
+.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  font-size: 3px;
+}
+
+.music{
+  position: fixed;
+  top: 10px;
+  right: 0;
+
+}
