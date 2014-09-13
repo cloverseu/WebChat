@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聊天室</title>
+
+  <!-- Bootstrap -->
+  <link href="Public/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Public/css/index.css" rel="stylesheet" media="screen">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div class="content">
+    <div class="login_container">
+      <form class="form-horizontal form_site" role="form">
+        <div class="form-group form-group-lg">
+          <div class="col-sm-9">
+            <input class="form-control col-md-3 col-md-offset-3" type="text" id="user" placeholder="用户名"></div>
+        </div>
+        <div class="form-group form-group-lg">
+          <div class="col-sm-9">
+            <input class="form-control col-md-3 col-md-offset-3" type="password" id="pwd" placeholder="密码"></div>
+        </div>
+        <div class="text-center">
+          <button type="button" id="login" class="btn btn-primary btn-lg">登陆</button>
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">注册</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="left_wrapper"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">新用户注册</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" role="form" enctype="multipart/form-data">
+              <div class="form-group form-group-lg">
+                <div class="col-sm-7">
+                  <input class="form-control col-md-3 col-md-offset-3" type="text" id="username" placeholder="用户名"></div>
+              </div>
+              <div class="form-group form-group-lg">
+                <div class="col-sm-7">
+                  <input class="form-control col-md-3 col-md-offset-3" type="password" id="password" placeholder="密码"></div>
+              </div>
+              <div class="form-group form-group-lg">
+                <div class="col-sm-7 ">
+                  <input class="form-control  col-md-offset-3" type="text" id="verify" placeholder="验证码"></br>
+                <img  class="img-thumbnail col-md-offset-3" src="{:U('Home/Index/Verify')}"  alt="点击刷新" id="verifyImg"/>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+          <button type="button" id="register" class="btn btn-primary">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="Public/js/bootstrap.min.js"></script>
+<script src="Public/js/index.js"></script>
+</body>
+</html>

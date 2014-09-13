@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($date)): $i = 0; $__LIST__ = $date;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$value): $mod = ($i % 2 );++$i;?><p><?php echo ($value["sender"]); ?>对<?php echo ($value["getter"]); ?>say:<?php echo ($value["content"]); ?><p><?php endforeach; endif; else: echo "" ;endif; ?>

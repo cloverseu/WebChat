@@ -1,0 +1,2 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$value): $mod = ($i % 2 );++$i;?><p style="color:#9900FF;margin-top:10px"><?php echo ($sender); ?><p>
+		<p><?php echo ($value["content"]); ?><p><?php endforeach; endif; else: echo "" ;endif; ?>
