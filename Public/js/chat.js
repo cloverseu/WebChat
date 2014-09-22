@@ -81,9 +81,10 @@ jQuery(document).ready(function($) {
 	$('#out').click(function() {
 		$.post('out', '', function(data) {
 			if (data) {
-				window.close();
+				window.location.replace('../../../');
 			} else {
 				alert("网络错误");
+				window.close();
 			}
 		}, 'json');
 	});

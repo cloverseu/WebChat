@@ -1,4 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (session('?id')){?>
 <html lang="zh-cn">
 <head>
   <meta charset="utf-8">
@@ -21,19 +22,19 @@
 
   <div id="backpic"></div>
 
-  <!-- <div class="music">
+   <div class="music">
   <audio controls="controls" autoplay="autoplay">
     <source src="song.ogg" type="audio/ogg" />
     <source src="../../../Public/music/song.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 </div>
--->
+
 <div class="left_container" id="left_container">
   <div class="panel panel-default">
     <div class="panel-body">
       <span class="glyphicon glyphicon-remove" id="out"></span>
-      <img class="media-object img-thumbnail" src="../../../Public/uploads/mini/<?php echo ($id); ?>.jpg" alt="头像" id="picture" data-toggle="modal" data-target="#myModal">
+      <img class="media-object img-thumbnail" src="../../../Public/uploads/mini/<?php echo $id?>.jpg" alt="头像" id="picture" data-toggle="modal" data-target="#myModal">
       <p class="text-center">Friend</p>
       <div class="col-lg-12">
         <div class="input-group">
@@ -53,8 +54,11 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#<?php echo ($list["id"]); ?>" >
-                  <?php
- if($list['status'] == "1"){?> <font color="blue"><?php }else{?> <font color="grey"><?php } echo ($list["username"]); ?></font>
+                  <?php if($list['status'] == "1"){?> 
+                      <font color="blue">
+                  <?php }else{?> 
+                      <font color="grey">
+                  <?php } echo ($list["username"]); ?></font>
                     <div>
                       <span class="badge" id="<?php echo ($list["id"]); ?>news"></span>
                     </div>
@@ -137,7 +141,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-        <button type="button" class="btn btn-primary">确认</button>
       </div>
     </div>
   </div>
@@ -195,7 +198,6 @@
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-<button type="button" class="btn btn-primary">确认</button>
 </div>
 </div>
 </div>
@@ -244,7 +246,6 @@
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-<button type="button" class="btn btn-primary">确认</button>
 </div>
 </div>
 </div>
@@ -269,7 +270,7 @@
 <script src="../../../Public/js/swfupload.js"></script>
 <script type="text/javascript">
         var path='../../../Public';
-        var url='/Chat-room/index.php/Home/Chat';
+        var url='/webchat/index.php/Home/Chat';
         var Btn=document.getElementById("Button1");
         Btn.click();
     </script>
@@ -277,7 +278,7 @@
     var swfu;
     window.onload = function () {
       swfu = new SWFUpload({
-        upload_url: "/Chat-room/index.php/Home/Chat/uploadImg",
+        upload_url: "/webchat/index.php/Home/Chat/uploadImg",
         post_params: {"PHPSESSID": "<?php echo session_id();?>"},
         file_size_limit : "2 MB",
         file_types : "*.jpg;*.png;*.gif;*.bmp",
@@ -311,3 +312,14 @@
 </body>
 
 </html>
+<?php } else {?>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>发生错误</title>
+  </head>
+  <body>
+      <p>对不起，您没有访问权限<p>
+  </body>
+  </html>
+<?php }?>
